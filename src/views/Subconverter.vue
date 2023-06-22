@@ -496,7 +496,7 @@ export default {
         sort: false,
         udp: false,
         tfo: false,
-        scv: true,
+        scv: false,
         fdn: false,
         appendType: false,
         insert: false, // 是否插入默认订阅的节点，对应配置项 insert_url
