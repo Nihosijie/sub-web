@@ -402,6 +402,15 @@ export default {
         ],
         remoteConfig: [
           {
+            label: "个人定制",
+            options: [
+              {
+                label: "geniusk customized",
+                value: "https://provider.geniusk.shop/Nihosijie/mysubconverter/main/converter/geniusk_customized.ini"
+              }
+            ]
+          },
+          {
             label: "universal",
             options: [
               {
@@ -477,7 +486,7 @@ export default {
         sourceSubUrl: "",
         clientType: "",
         customBackend: "http://subconverter--nihosijie.repl.co",
-        remoteConfig: "",
+        remoteConfig: "https://provider.geniusk.shop/Nihosijie/mysubconverter/main/converter/geniusk_customized.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
