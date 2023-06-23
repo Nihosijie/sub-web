@@ -397,6 +397,7 @@ export default {
           Surge2: "surge&ver=2",
         },
         backendOptions: [
+          { value:  "http://subconverter.geniusk.shop/sub?"},
           { value:  "http://subconverter--nihosijie.repl.co/sub?"},
           { value: "http://127.0.0.1:25500/sub?" }
         ],
@@ -485,7 +486,7 @@ export default {
       form: {
         sourceSubUrl: "",
         clientType: "",
-        customBackend: "http://subconverter--nihosijie.repl.co/sub?",
+        customBackend: "http://subconverter.geniusk.shop/sub?",
         remoteConfig: "https://provider.geniusk.shop/Nihosijie/mysubconverter/main/converter/geniusk_customized.ini",
         excludeRemarks: "",
         includeRemarks: "",
