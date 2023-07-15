@@ -397,12 +397,12 @@ export default {
           Surge2: "surge&ver=2",
         },
         backendOptions: [
-          { value: "https://sub.maoxiongnet.com/sub?" },
-          { value: "https://api.dler.io/sub?" },
-          { value: "https://sub.xeton.dev/sub?" },
-          { value: "https://sub.id9.cc/sub?" },
-          { value:  "http://subconverter.geniusk.shop/sub?" },
-          { value: "http://127.0.0.1:25500/sub?" }
+          { label: "sub.maoxiongnet.com(猫熊提供-稳定)", value: "https://sub.maoxiongnet.com/sub?" },
+          { label: "api.dler.io(lhie1提供-稳定)", value: "https://api.dler.io/sub?" },
+          { label: "sub.xeton.dev(subconverter作者提供-稳定)", value: "https://sub.xeton.dev/sub?" },
+          { label: "sub.id9.cc(品云提供-稳定)", value: "https://sub.id9.cc/sub?" },
+          { label: "replit-cloudflare加速", value:  "http://subconverter.geniusk.shop/sub?" },
+          { label: "本地25500", value: "http://127.0.0.1:25500/sub?" }
         ],
         remoteConfig: [
           {
