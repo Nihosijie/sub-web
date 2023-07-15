@@ -48,19 +48,26 @@
 
               <div v-if="advanced === '2'">
                 <el-form-item label="后端地址:">
-                  <el-autocomplete
-                    style="width: 100%"
+                  <el-select
                     v-model="form.customBackend"
-                    :fetch-suggestions="backendSearch"
-                    placeholder="动动小手，（建议）自行搭建后端服务。例：http://127.0.0.1:25500/sub?"
+                    allow-create
+                    filterable
+                    placeholder="请选择"
+                    style="width: 100%"
                   >
+                    <el-option
+                      v-for="item in options.backendOptions"
+                      :key="item.value"
+                      :label="item.label"
+                      :value="item.value"
+                    ></el-option>
                     <el-button
                       slot="append"
                       @click="gotoGayhub"
                       icon="el-icon-link"
                       >前往项目仓库</el-button
                     >
-                  </el-autocomplete>
+                  </el-select>
                 </el-form-item>
                 <el-form-item label="远程配置:">
                   <el-select
@@ -397,12 +404,27 @@ export default {
           Surge2: "surge&ver=2",
         },
         backendOptions: [
-          { label: "sub.maoxiongnet.com(猫熊提供-稳定)", value: "https://sub.maoxiongnet.com/sub?" },
-          { label: "api.dler.io(lhie1提供-稳定)", value: "https://api.dler.io/sub?" },
-          { label: "sub.xeton.dev(subconverter作者提供-稳定)", value: "https://sub.xeton.dev/sub?" },
-          { label: "sub.id9.cc(品云提供-稳定)", value: "https://sub.id9.cc/sub?" },
-          { label: "replit-cloudflare加速", value:  "http://subconverter.geniusk.shop/sub?" },
-          { label: "本地25500", value: "http://127.0.0.1:25500/sub?" }
+          {
+            label: "sub.maoxiongnet.com(猫熊提供-稳定)",
+            value: "https://sub.maoxiongnet.com/sub?",
+          },
+          {
+            label: "api.dler.io(lhie1提供-稳定)",
+            value: "https://api.dler.io/sub?",
+          },
+          {
+            label: "sub.xeton.dev(subconverter作者提供-稳定)",
+            value: "https://sub.xeton.dev/sub?",
+          },
+          {
+            label: "sub.id9.cc(品云提供-稳定)",
+            value: "https://sub.id9.cc/sub?",
+          },
+          {
+            label: "replit-cloudflare加速",
+            value: "http://subconverter.geniusk.shop/sub?",
+          },
+          { label: "本地25500", value: "http://127.0.0.1:25500/sub?" },
         ],
         remoteConfig: [
           {
@@ -410,9 +432,10 @@ export default {
             options: [
               {
                 label: "geniusk customized",
-                value: "https://provider.geniusk.shop/Nihosijie/mysubconverter/main/converter/geniusk_customized.ini"
-              }
-            ]
+                value:
+                  "https://provider.geniusk.shop/Nihosijie/MyRules/main/Config/geniusk.ini",
+              },
+            ],
           },
           {
             label: "universal",
@@ -490,7 +513,8 @@ export default {
         sourceSubUrl: "",
         clientType: "",
         customBackend: "https://sub.maoxiongnet.com/sub?",
-        remoteConfig: "https://provider.geniusk.shop/Nihosijie/mysubconverter/main/converter/geniusk_customized.ini",
+        remoteConfig:
+          "https://provider.geniusk.shop/Nihosijie/MyRules/main/Config/geniusk.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
